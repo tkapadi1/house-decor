@@ -1,17 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comfy Decor</title>
 
     <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/6f41becc3e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- CSS file -->
+    <link href="style.css" rel="stylesheet" />
 
     <!-- Google Fonts -->
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span class="nav-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+            <img src="images/logo_main.svg"  alt="store logo">
+            <div class="cart-btn">
+                <span class="nav-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </span>
+                <div class="cart-items">0</div>
+            </div>
+        </div>
+    </nav>
+    <!-- end of nav bar -->
+
+    <!-- Center text and boundaries -->
+    <header class="hero">
+        <div class="banner">
+            <h1 class="banner-title">Furniture Collection</h1>
+            <button class="banner-btn">Shop Now</button>
+        </div>
+    </header>
+    <!-- End of Center text and boundaries -->
+
+    <!-- Products -->
+    <section class="products">
+        <div class="section-title">
+            <h2>Our Products</h2>
+        </div>
+        <div class="products-center">
+            <!-- Single product -->
+            <article class="product">
+                <div class="img-container">
+                    <img src="images/product-1.jpeg" alt="product 1 image" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to bag
+                    </button>
+                </div>
+                <h3>queen bed</h3>
+                <h4>$16</h4>
+            </article>
+            <!-- End of single product -->
+        </div>
+    </section>
+    <!-- End of products -->
+
+    <!-- cart -->
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="close-cart">
+                <i class="fas fa-window-close"></i>
+            </span>
+            <h2>your cart</h2>
+            <div class="cart-content">
+
+                
+                <!-- cart-item -->
+                <div class="cart-item">
+                    <img src="images/product-1.jpeg" alt="product">
+                </div>
+                <div class="">
+
+                </div>
+                <div class="">
+                    
+                </div>
+                <!-- end of cart item -->
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end of cart -->
+    <!-- <i class="fas fa-home"></i> -->
     <!-- Java Script -->
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
