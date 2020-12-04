@@ -261,6 +261,14 @@ body {
     text-transform: capitalize;
     margin-bottom: 1rem;
   }
+
+  .icon{
+    margin-right: 1rem;
+  }
+
+  .icon2{
+    padding-left: 2rem;
+  }
   
   /* --------------- End of Cart ---------------- */
   
