@@ -13,6 +13,7 @@ const productsDOM = document.querySelector(".products-center");
 // main Cart
 let cart = [];
 let buttonsDOM = [];
+let cart_total = 0;
 
 //getting the products
 class Products {
@@ -60,7 +61,7 @@ class UI {
   }
 
   // to get the Buttons response
-getBagButtons() {
+  getBagButtons() {
     let buttons = [...document.querySelectorAll(".bag-btn")];
     buttonsDOM = buttons;
     buttons.forEach((button) => {
@@ -93,6 +94,8 @@ getBagButtons() {
       tempTotal += item.price * item.amount;
       itemsTotal += item.amount;
     });
+    cart_total = tempTotal.toFixed(2);
+    Storage.saveCartValue(cart_total);
     cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
     cartItems.innerText = itemsTotal;
   }
@@ -211,6 +214,9 @@ class Storage {
     return localStorage.getItem("cart")
       ? JSON.parse(localStorage.getItem("cart"))
       : [];
+  }
+  static saveCartValue(cart_total) {
+    localStorage.setItem("cart_value", JSON.stringify(cart_total));
   }
 }
 

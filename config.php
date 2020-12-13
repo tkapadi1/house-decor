@@ -1,11 +1,14 @@
 <?php
-$host = "localhost";
-$userName = "fyrhp";
-$password = "RTDE";
-$dbName = "fyrhp";
-// Create database connection
-$conn = new mysqli($host, $userName, $password, $dbName);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "house-decor";
+// Create connection
+$mysqli = new mysqli($servername, $username, $password,$db);
+
 // Check connection
-if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
-}
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+} 
+
+?>
